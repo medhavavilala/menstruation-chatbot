@@ -44,5 +44,9 @@
       ]
     }
   ]
+  "fallback": {
+    "message": "I do not have information on that yet. If your symptoms are severe or unusual, consider talking to a healthcare provider."
+  }
+}
  
       
