@@ -1,1 +1,42 @@
-
+{
+  "basic talk": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hey", "hello", "hi there", "hey there", "heyo", "hiya", "howdy", "yo", "sup", "what's up?", "good morning", "good afternoon", "good evening", "greetings", "ahoy", "hi hi", "yo yo", "hey buddy", "hey friend", "hola"],
+      "response": ["Hi there! I'm here to help with any questions you may have about menstrual pain. You can ask me anything, whether its about cramps, back pain, or headaches, and I'll provide some helpful advice!"]
+    }
+  ],
+  "headaches": [
+    {
+      "tag": "ask_what_are_headaches",
+      "patterns": [
+        "why do i get headaches on my period?",
+        "why do i get headaches during my period?",
+        "why do i have headaches on my period?",
+        "why do i get migraines on my period?",
+        "why do i feel head pain during menstruation?",
+        "why do i have head pain during my cycle?",
+        "why do i get period headaches?",
+        "why does my head hurt when i have my period?",
+        "why do i always get a headache on my period?",
+        "why do i get headaches every month?",
+        "why does my period give me headaches?",
+        "why do i get migraines when i’m on my period?",
+        "why do i feel dizzy or have a headache on my period?",
+        "why do i get tension headaches during my period?",
+        "why does my head hurt around my period?",
+        "why do i get pain in my head when menstruating?",
+        "why head hurts every month, why?",
+        "i always get a headache before or during my period, why?",
+        "What causes period headaches?",
+        "is it normal to get headaches on my period?",
+        "why do periods give me headaches?",
+        
+      ],
+      "response": [
+        "Period headaches are common types of migraine that occur around the time of your menstrual cycle. Hormonal changes usually cause these migraines, and they may get worse with movement, light, smells, or sounds. These symptoms can range from a few hours to multiple days. If these symptoms align with what you are experiencing, sleeping in a quiet room without any bright lights or strong odors may relieve symptoms. Also, eating meals to prevent your stomach from being empty may also help. If the headaches are more severe, they are typically called menstrual migraines. 60% of people who experience menstruation experience hormonal migraines around their period."
+      ]
+    }
+  ]
+ 
+      
