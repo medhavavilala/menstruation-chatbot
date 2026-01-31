@@ -1,4 +1,10 @@
 {
+  "meta": {
+    "version": "1.0",
+    "lastUpdated": "2026-01-31",
+    "disclaimer": "This chatbot provides educational information, not medical advice."
+  },
+{
   "basic talk": [
     {
       "tag": "greeting",
