@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FAQ Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .search-box {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .result {
+      background: white;
+      padding: 15px;
+      margin: 10px auto;
+      width: 80%;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .topic {
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Health FAQ Search</h1>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Ask a question or type keywords..." />
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <div id="results"></div>
+
+  <script src="app.js"></script>
+
+  <script>
+    // Connect button to search function
+    document.getElementById("searchBtn").addEventListener("click", () => {
+      const input = document.getElementById("searchInput").value;
+      const matches = searchFAQ(input);
+      const resultsDiv = document.getElementById("results");
+      resultsDiv.innerHTML = "";
+
+      if (!matches) {
+        resultsDiv.innerHTML = `<div class="result">${faqData.fallback.message}</div>`;
+        return;
+      }
+
+      matches.slice(0, 5).forEach(result => {
+        const div = document.createElement("div");
+        div.className = "result";
+        div.innerHTML = `
+          <div class="topic">Topic: ${result.topic}</div>
+          <div><strong>Q:</strong> ${result.question}</div>
+          <div><strong>A:</strong> ${result.answer}</div>
+        `;
+        resultsDiv.appendChild(div);
+      });
+    });
+  </script>
+
+</body>
+</html>
