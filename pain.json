@@ -1,52 +1,361 @@
-{
-  "meta": {
-    "version": "1.0",
-    "lastUpdated": "2026-01-31",
-    "disclaimer": "This chatbot provides educational information, not medical advice."
-  },
-{
-  "basic talk": [
+     {
+  "category": "menstrual_pain",
+  "audience": "teens",
+  "global_disclaimer": "I am not a medical professional. This chatbot provides educational information only and does not replace professional medical advice. If pain is severe, unusual, or worsening, consult a healthcare provider or trusted adult.",
+  "qa": [
     {
-      "tag": "greeting",
-      "patterns": ["hi", "hey", "hello", "hi there", "hey there", "heyo", "hiya", "howdy", "yo", "sup", "what's up?", "good morning", "good afternoon", "good evening", "greetings", "ahoy", "hi hi", "yo yo", "hey buddy", "hey friend", "hola"],
-      "response": ["Hi there! I'm here to help with any questions you may have about menstrual pain. You can ask me anything, whether its about cramps, back pain, or headaches, and I'll provide some helpful advice!"]
-    }
-  ],
-  "headaches": [
+      "id": 1,
+      "intent": "new_pain_development",
+      "triggers": ["never had cramps before", "new cramps", "period pain suddenly"],
+      "question": "I am 15 years old, and I have never had cramps until recently. Now, I get back pain, and the headaches are unbearable. How come?",
+      "answer": "The cramps, backache, and headache are all caused by the hormone prostaglandin. The uterus creates prostaglandins when hormone levels like estrogen rise. It may take multiple years after your first period to raise hormone levels to a higher point. The uterus also makes more prostaglandins when there is more pressure inside of the uterus, which happens when the uterus grows and muscles get stronger. When progesterone levels rise, there are typically fewer prostaglandins and therefore fewer cramps."
+    },
     {
-      "tag": "ask_what_are_headaches",
-      "patterns": [
-        "why do i get headaches on my period?",
-        "why do i get headaches during my period?",
-        "why do i have headaches on my period?",
-        "why do i get migraines on my period?",
-        "why do i feel head pain during menstruation?",
-        "why do i have head pain during my cycle?",
-        "why do i get period headaches?",
-        "why does my head hurt when i have my period?",
-        "why do i always get a headache on my period?",
-        "why do i get headaches every month?",
-        "why does my period give me headaches?",
-        "why do i get migraines when i’m on my period?",
-        "why do i feel dizzy or have a headache on my period?",
-        "why do i get tension headaches during my period?",
-        "why does my head hurt around my period?",
-        "why do i get pain in my head when menstruating?",
-        "why head hurts every month, why?",
-        "i always get a headache before or during my period, why?",
-        "What causes period headaches?",
-        "is it normal to get headaches on my period?",
-        "why do periods give me headaches?",
-        
-      ],
-      "response": [
-        "Period headaches are common types of migraine that occur around the time of your menstrual cycle. Hormonal changes usually cause these migraines, and they may get worse with movement, light, smells, or sounds. These symptoms can range from a few hours to multiple days. If these symptoms align with what you are experiencing, sleeping in a quiet room without any bright lights or strong odors may relieve symptoms. Also, eating meals to prevent your stomach from being empty may also help. If the headaches are more severe, they are typically called menstrual migraines. 60% of people who experience menstruation experience hormonal migraines around their period."
-      ]
+      "id": 2,
+      "intent": "abnormal_pain",
+      "triggers": ["my pain is not normal", "period pain abnormal"],
+      "question": "I don’t think my pain is normal. What could it be?",
+      "answer": "Pain in the uterus normally occurs during the first 1–2 days. Pain from endometriosis occurs if the pain lasts more than 1–2 days and starts before the period. Endometriosis occurs when bits of endometrium grow outside of the uterus. Many women with period pain experience both of these problems."
+    },
+    {
+      "id": 3,
+      "intent": "define_dysmenorrhea",
+      "triggers": ["what is dysmenorrhea"],
+      "question": "What is dysmenorrhea?",
+      "answer": "Dysmenorrhea causes severe cramps and pain during your period. Primary dysmenorrhea occurs when you first start your period and continues throughout life. Secondary dysmenorrhea usually starts later in life and may be caused by another medical condition like pelvic inflammatory disease or endometriosis."
+    },
+    {
+      "id": 4,
+      "intent": "pain_statistics",
+      "triggers": ["how common is period pain"],
+      "question": "How common is period pain among women?",
+      "answer": "Menstrual pain was reported by 84.1% of women, with 43.1% stating pain occurs with every period and 41% stating pain occurs occasionally."
+    },
+    {
+      "id": 5,
+      "intent": "period_headache",
+      "triggers": ["period headache", "menstrual migraine"],
+      "question": "What is a period headache?",
+      "answer": "Period headaches are common types of migraine that occur around the time of your menstrual cycle. Hormonal changes usually cause these migraines. They are typically one-sided and may worsen with movement, light, smells, or sounds. Symptoms can last from a few hours to multiple days."
+    },
+    {
+      "id": 6,
+      "intent": "back_pain",
+      "triggers": ["lower back pain period"],
+      "question": "Why do I have severe lower back pain during my period?",
+      "answer": "Lower back pain is a symptom of premenstrual syndrome (PMS), which affects the majority of women during their periods. PMS usually occurs for a week leading up to the period and stops once the period starts. Symptoms include abdominal cramps, bloating, and constipation or diarrhea."
+    },
+
+    {
+      "id": 7,
+      "intent": "cramp_symptoms",
+      "triggers": ["cramping symptoms"],
+      "question": "What are the symptoms of cramping aside from pain?",
+      "answer": "Symptoms include nausea, dizziness, loose stool, fatigue, and headaches. You should see your healthcare provider if symptoms worsen over time."
+    },
+
+    {
+      "id": 8,
+      "intent": "cramp_timing",
+      "triggers": ["when do cramps start"],
+      "question": "When do menstrual cramps begin and conclude?",
+      "answer": "Pain begins 1 to 3 days before the period, peaks at 24 hours, and subsides in 2 to 3 days."
+    },
+
+    {
+      "id": 9,
+      "intent": "secondary_dysmenorrhea_causes",
+      "triggers": ["secondary dysmenorrhea causes"],
+      "question": "What are some causes of secondary dysmenorrhea?",
+      "answer": "Causes include endometriosis, fibroids, and adenomyosis."
+    },
+
+    {
+      "id": 10,
+      "intent": "vitamins",
+      "triggers": ["vitamins for cramps"],
+      "question": "Can vitamins help with painful periods?",
+      "answer": "Vitamin D, vitamin E, and ginger reduced the severity of dysmenorrhea, with ginger having the most significant effect. Ginger contains anti-inflammatory properties."
+    },
+    {
+      "id": 11,
+      "intent": "nsaids_info",
+      "triggers": ["what are NSAIDs", "nsaids period pain"],
+      "question": "What are NSAIDs and how are they used?",
+      "answer": "NSAIDs (Nonsteroidal anti-inflammatory drugs) help reduce pain and inflammation. They are used when first experiencing period pain. If a woman has bleeding disorders, asthma, aspirin allergy, liver damage, stomach disorders, or ulcers, she should not take NSAIDs."
+    },
+    {
+      "id": 12,
+      "intent": "iud_pain",
+      "triggers": ["iud for cramps", "iud painful periods"],
+      "question": "Can the IUD be used for painful periods?",
+      "answer": "Yes, the intrauterine device (small device inserted into the uterus to prevent pregnancy) can treat painful periods, but it should not be a first resort."
+    },
+    {
+      "id": 13,
+      "intent": "home_treatment",
+      "triggers": ["help period pain at home", "home remedies cramps"],
+      "question": "What can I do to help my period pain at home?",
+      "answer": "Exercising, such as walking, biking, or jogging can produce chemicals that block pain. Applying heat to the abdomen with a warm bath or heating pad and getting enough sleep can help with discomfort."
+    },
+    {
+      "id": 14,
+      "intent": "hormone_headache_feel",
+      "triggers": ["what does hormone headache feel like"],
+      "question": "What does a hormone headache feel like?",
+      "answer": "Pulsing and throbbing pain. More severe than a regular headache."
+    },
+    {
+      "id": 15,
+      "intent": "period_headache_frequency",
+      "triggers": ["how common are period headaches"],
+      "question": "How common are period headaches among women?",
+      "answer": "60% of people who experience menstruation experience hormonal migraines around their period."
+    },
+    {
+      "id": 16,
+      "intent": "pain_changes_over_time",
+      "triggers": ["do cramps change with age"],
+      "question": "How does the severity of period cramps change over time?",
+      "answer": "Through your 20s, period flow becomes more consistent but cramps and PMS symptoms are most prevalent. Through your 30s, menstruation becomes predictable and heavier flow or painful cramps is rarer. Through your 40s, signs of the ending of menstruation begin due to perimenopausal hormone fluctuations."
+    },
+    {
+      "id": 17,
+      "intent": "lifestyle_effects",
+      "triggers": ["does lifestyle affect cramps"],
+      "question": "Does lifestyle affect period pain?",
+      "answer": "Yes, regular exercising lessens period pain along with a healthy diet. Diets high in vegetables, fruits, nuts, seeds, and fish reduce bloating and pain. Lean meats like red meat and chicken provide iron and protein. Exercise releases serotonin and endorphins that relieve cramps and mood fluctuations."
+    },
+    {
+      "id": 18,
+      "intent": "serious_signs",
+      "triggers": ["when pain serious", "severe cramps signs"],
+      "question": "What would suggest that my period pain is more serious than normal?",
+      "answer": "Pain consistent for a week before the period starts, pelvic pain between periods, pain with bowel movements, heavy and abnormal bleeding, bleeding lasting longer than a week, and blood clots larger than a quarter."
+    },
+    {
+      "id": 19,
+      "intent": "diagnostic_tests",
+      "triggers": ["tests for dysmenorrhea"],
+      "question": "What diagnostic tests can be used to evaluate dysmenorrhea?",
+      "answer": "Laparoscopy may be used if the cause is unknown. Physical examination and transvaginal ultrasonography should be performed if secondary dysmenorrhea is suspected. CT scans, MRIs, and ultrasounds can also help."
+    },
+    {
+      "id": 20,
+      "intent": "headache_medical_attention",
+      "triggers": ["when period headache serious"],
+      "question": "What signs should indicate medical attention for a period headache?",
+      "answer": "Lack of hydration, skipping meals, lack of sleep, and stress can lead to menstrual headaches. Severe vomiting, nausea, dizziness, along with the migraine indicates a headache requiring medical attention."
+    },
+    {
+      "id": 21,
+      "intent": "symptom_tracking",
+      "triggers": ["track period pain", "period pain calendar"],
+      "question": "Can tracking symptoms across menstrual cycles help with diagnosis?",
+      "answer": "Doctors may suggest tracking symptoms on a calendar for at least two cycles. Note the first day symptoms occur and the day they disappear or continue tracking pain levels."
+    },
+    {
+      "id": 22,
+      "intent": "back_pain_timing",
+      "triggers": ["when does back pain start"],
+      "question": "How early during your period does back pain begin?",
+      "answer": "Back pain can occur in the week before your period and within the first three days. Pain and throbbing may occur in any area of the back."
+    },
+    {
+      "id": 23,
+      "intent": "back_pain_physiology",
+      "triggers": ["why back pain happens"],
+      "question": "What exactly occurs during period back pain?",
+      "answer": "The uterus increases in size slightly before the period. This growth puts pressure on nerve endings and tissues, causing discomfort and pain in the back, hips, and pelvis."
+    },
+    {
+      "id": 24,
+      "intent": "otc_medication",
+      "triggers": ["otc cramps medicine"],
+      "question": "What over-the-counter medications help with cramps?",
+      "answer": "Pain relievers like ibuprofen and naproxen sodium at regular doses starting the day before the period. Oral birth control pills reduce cramps by preventing ovulation."
+    },
+    {
+      "id": 25,
+      "intent": "surgery_appropriate",
+      "triggers": ["when surgery for period pain"],
+      "question": "When would surgery or medical procedures be appropriate for aiding period pain?",
+      "answer": "When medication does not help or cannot be used due to medical issues, or if fibroids or endometriosis are present."
+    },
+    {
+      "id": 26,
+      "intent": "surgery_types",
+      "triggers": ["types of surgery period pain"],
+      "question": "What are some different examples of surgeries for period pain?",
+      "answer": "Endometrial ablation removes or destroys the lining of the uterus using heat, with a hysteroscope inserted under local or general anesthetic. Myomectomy removes fibroids from the uterus. Hysterectomy removes the entire uterus and sometimes the cervix, ovaries, or fallopian tubes."
+    },
+    {
+      "id": 27,
+      "intent": "cramp_locations",
+      "triggers": ["where do cramps hurt"],
+      "question": "What bodily areas are most commonly affected by period cramps?",
+      "answer": "Lower abdomen, hips, thighs, and legs may experience pain."
+    },
+    {
+      "id": 28,
+      "intent": "severe_pain_diagnosis",
+      "triggers": ["how is severe period pain diagnosed"],
+      "question": "How is the cause of severe period pain diagnosed?",
+      "answer": "Healthcare providers ask about pain history and conduct a pelvic exam. Ultrasounds or other imaging tests may be performed."
+    },
+    {
+      "id": 29,
+      "intent": "primary_dysmenorrhea_physiology",
+      "triggers": ["why cramps happen", "primary dysmenorrhea cause"],
+      "question": "What physiologically occurs in the body to cause primary dysmenorrhea/period cramps?",
+      "answer": "There is increased secretion of prostaglandin hormones within the uterus, causing pelvic pain."
+    },
+    {
+      "id": 30,
+      "intent": "worsening_factors",
+      "triggers": ["what worsens period pain"],
+      "question": "What lifestyle factors can worsen period pain?",
+      "answer": "Smoking cigarettes, lack of physical activity, low fiber intake, and conditions such as endometriosis, fibroids, or pelvic inflammatory disease can worsen period pain."
+    },
+    {
+      "id": 31,
+      "intent": "postpartum_period",
+      "triggers": ["first period after childbirth"],
+      "question": "What can you expect for your first period after childbirth?",
+      "answer": "Parents who breastfeed usually do not get their period until after nursing. Those who do not breastfeed or do a combination of breastfeeding and bottle feeding may get their period a little over a month after childbirth."
+    },
+    {
+      "id": 32,
+      "intent": "acupuncture",
+      "triggers": ["does acupuncture help cramps"],
+      "question": "How does acupuncture affect period pain?",
+      "answer": "Studies from Australia and New Zealand show acupuncture can reduce period pain intensity and symptoms over time. Acupuncture needles trigger the brain to release endorphins and increase blood flow to the pelvic region, reducing stagnation."
+    },
+    {
+      "id": 33,
+      "intent": "period_products_help",
+      "triggers": ["free period products"],
+      "question": "What organizations can women go to in western states to receive free or low-priced menstrual products?",
+      "answer": "Raising Girls supports western youth facing period poverty. The Seventh Generation Fund for Indigenous Peoples provides Indigenous women and girls with period packs and Moon Time products."
+    },
+    {
+      "id": 34,
+      "intent": "ivf_cramps",
+      "triggers": ["ivf period cramps"],
+      "question": "I had an IVF treatment a few years ago and now my period cramps are extremely intense. Could the treatment have caused this?",
+      "answer": "Many women who undergo IVF experience severe cramping and abdominal pain after embryo transfer. If cramps continue, seeing a doctor may help determine if IVF is the cause."
+    },
+    {
+      "id": 35,
+      "intent": "night_cramps",
+      "triggers": ["cramps worse at night"],
+      "question": "Why do my cramps feel worse at night instead of the day?",
+      "answer": "Blood flow within the uterus increases when lying down. Stress and tension from the day may build up and become more noticeable at night."
+    },
+    {
+      "id": 36,
+      "intent": "painkiller_not_working",
+      "triggers": ["painkillers not working"],
+      "question": "What can I do if painkillers don’t help my cramps anymore?",
+      "answer": "This may be a sign to consult your doctor so they can look into other possible causes of your period pain."
+    },
+    {
+      "id": 37,
+      "intent": "brain_fog",
+      "triggers": ["brain fog before period"],
+      "question": "Why do I experience brain fog before my period?",
+      "answer": "People sensitive to hormone fluctuations may experience brain fog before their period due to estrogen and progesterone affecting cognitive skills."
+    },
+    {
+      "id": 38,
+      "intent": "posture_back_pain",
+      "triggers": ["posture back pain period"],
+      "question": "Can bad posture worsen period back pain?",
+      "answer": "Yes, poor posture, muscle tension, and hormone fluctuations can worsen back pain caused by periods."
+    },
+    {
+      "id": 39,
+      "intent": "dehydration_cramps",
+      "triggers": ["does dehydration worsen cramps"],
+      "question": "Can dehydration make period cramps more painful?",
+      "answer": "Dehydration can shorten blood flow to the uterus, causing cramping due to reduced blood volume and fluids."
+    },
+    {
+      "id": 40,
+      "intent": "food_cramps",
+      "triggers": ["foods worsen cramps"],
+      "question": "Why do certain foods make my cramps hurt more?",
+      "answer": "Foods with refined sugars and salty snacks cause blood sugar spikes, irritation, and inflammation, worsening cramps during periods."
+    },
+    {
+      "id": 41,
+      "intent": "post_period_cramps",
+      "triggers": ["cramps after period"],
+      "question": "Why do my cramps continue after my period ended?",
+      "answer": "Hormone levels fluctuate during the menstrual cycle. If progesterone levels drop before the period ends, uterine contractions and cramps may occur. If cramps persist or worsen, conditions such as endometriosis or pelvic inflammatory disease may be considered."
+    },
+    {
+      "id": 42,
+      "intent": "back_pain_remedies",
+      "triggers": ["back pain remedies period"],
+      "question": "What at-home remedies should I acquire to relieve back pain during my period?",
+      "answer": "Applying a heating pad to the lower or upper back can relieve pain. A heating pad can be made by microwaving a warm washcloth for 30 seconds. Simple stretches can also help relieve tension."
+    },
+    {
+      "id": 43,
+      "intent": "iron_deficiency",
+      "triggers": ["iron deficiency cramps"],
+      "question": "Can iron deficiency or anemia worsen period pain?",
+      "answer": "Iron deficiency often results from heavier periods and loss of iron storage. Heavier periods can cause frequent cramps. Consuming iron-rich foods such as meat, seafood, and beans can help."
+    },
+    {
+      "id": 44,
+      "intent": "leg_pain",
+      "triggers": ["leg pain during period"],
+      "question": "Apart from contractions, what causes leg pain during periods?",
+      "answer": "Leg pain may be referred pain from the pelvis. Nerves supplying the uterus, lower back, and legs are connected. Hormonal changes may also affect the sciatic nerve, causing sharp pain or numbness."
+    },
+    {
+      "id": 45,
+      "intent": "retroverted_uterus",
+      "triggers": ["retroverted uterus pain"],
+      "question": "What are retroverted uteruses, and how do they affect period pain?",
+      "answer": "A retroverted uterus tilts toward the spine instead of the abdomen. This can worsen period pain and may lead to urinary tract infections."
+    },
+    {
+      "id": 46,
+      "intent": "adenomyosis",
+      "triggers": ["what is adenomyosis"],
+      "question": "What exactly is adenomyosis, and how does it affect my period?",
+      "answer": "Adenomyosis causes endometrial tissue to grow into the uterine walls. The uterus swells to two or three times its normal size. During menstruation, this tissue damages blood vessels, causing heavy and painful periods."
+    },
+    {
+      "id": 47,
+      "intent": "birth_control",
+      "triggers": ["hormonal contraceptives period"],
+      "question": "What are hormonal contraceptives, and how do they affect my period?",
+      "answer": "Hormonal contraceptives, also known as birth control, prevent pregnancy and are taken as pills or injections. They can lighten period flow and reduce cramps."
+    },
+    {
+      "id": 48,
+      "intent": "heat_effects",
+      "triggers": ["heat affect period"],
+      "question": "How do higher body temperatures affect the menstrual cycle?",
+      "answer": "Temperature sensitivity can cause fatigue, discomfort, and hormone imbalance. Hormonal imbalance can change period timing, length, severity, and increase pain."
+    },
+    {
+      "id": 49,
+      "intent": "pelvic_floor_dysfunction",
+      "triggers": ["what is pelvic floor dysfunction"],
+      "question": "What is pelvic floor dysfunction and how does it affect menstrual pain?",
+      "answer": "Pelvic floor dysfunction causes tight pelvic muscles. This tightness can cause pelvic pain and increase period cramps, similar to clenching muscles for long periods."
+    },
+    {
+      "id": 50,
+      "intent": "final_safety",
+      "triggers": ["still worried about pain"],
+      "question": "What should I do if I am still worried about my period pain?",
+      "answer": "You should speak with a healthcare provider or trusted adult if pain is severe, unusual, worsening, or interfering with daily life."
     }
   ]
-  "fallback": {
-    "message": "I do not have information on that yet. If your symptoms are severe or unusual, consider talking to a healthcare provider."
-  }
 }
- 
-      
