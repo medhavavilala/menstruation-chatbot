@@ -687,4 +687,24 @@
       "answer": "The hormones within your body are like mood swings in relation to your pain system. Some people may have lower levels of hormones, so their resulting pain is lower. Others may experience increased discomfort, cramping, and various other symptoms from periods."
     }
   ]
+  "fallback": {
+    "intent": "fallback_unknown",
+    "triggers": [],
+    "message": "I'm not sure I understood that question.",
+    "follow_up": [
+      "Can you explain your symptom in a different way?",
+      "When did the pain start?",
+      "Is the pain in your stomach, back, head, or somewhere else?",
+      "Does the pain happen before, during, or after your period?"
+    ],
+    "examples": [
+      "Why are my cramps worse at night?",
+      "Can dehydration make cramps worse?",
+      "Why do I feel nauseous during my period?",
+      "How can I relieve lower back pain?"
+    ],
+    "safety_response": "If your pain is severe, unusual, suddenly much worse than normal, causes fainting, very heavy bleeding, fever, or stops you from daily activities, please talk to a trusted adult or healthcare provider.",
+    "tone": "supportive",
+    "retry_limit_message": "I still may not understand your question. Try asking about cramps, headaches, back pain, nausea, or another period symptom."
+  }
 }
