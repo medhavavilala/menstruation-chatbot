@@ -298,5 +298,57 @@
         </main>
     </div>
 
+    function switchCategory(category) {
+            currentCategory = category;
+            
+            // Update Active Class on Sidebar
+            document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            // Update Titles
+            const formattedTitle = category.charAt(0).toUpperCase() + category.slice(1);
+            document.getElementById('current-category-title').innerText = `${formattedTitle} Support`;
+            document.getElementById('suggestion-topic-name').innerText = formattedTitle;
+
+            loadCategoryQuestions(category);
+        }
+
+        // Simulates the bot dialogue when clicking a question chip
+        function handleQuestionClick(question, answer) {
+            const chatLog = document.getElementById('chat-messages');
+
+            // 1. Render User Message Selection
+            const userDiv = document.createElement('div');
+            userDiv.className = 'message user';
+            userDiv.innerHTML = `
+                <div class="message-bubble">${question}</div>
+                <div class="message-meta">You</div>
+            `;
+            chatLog.appendChild(userDiv);
+
+            // 2. Render Bot Simulated Response
+            setTimeout(() => {
+                const botDiv = document.createElement('div');
+                botDiv.className = 'message bot';
+                botDiv.innerHTML = `
+                    <div class="message-bubble">${answer}</div>
+                    <div class="message-meta">CycleCare Bot</div>
+                `;
+                chatLog.appendChild(botDiv);
+                
+                // Auto Scroll to bottom
+                chatLog.scrollTop = chatLog.scrollHeight;
+            }, 400); // Quick natural delay simulation
+
+            // Auto Scroll to bottom immediately for user message
+            chatLog.scrollTop = chatLog.scrollHeight;
+        }
+
+        // Initial setup on window load
+        window.onload = function() {
+            loadCategoryQuestions('pain');
+        };
+    </script>
+
 </body>
 </html>
