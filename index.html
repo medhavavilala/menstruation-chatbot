@@ -1,91 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>FAQ Search</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      padding: 40px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CycleCare - Period Support Chatbot</title>
+    <style>
+        :root {
+            --bg-color: #fcf8f7;
+            --sidebar-bg: #f4eae6;
+            --chat-bg: #ffffff;
+            --text-main: #4a3f3b;
+            --text-muted: #8a7a75;
+            --primary-accent: #e07a5f;
+            --primary-light: #f2cc8f;
+            --bubble-user: #f2cc8f;
+            --bubble-bot: #f4eae6;
+            --border-color: #e8dcd8;
+        }
 
-    h1 {
-      text-align: center;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    .search-box {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-    input {
-      width: 300px;
-      padding: 10px;
-      font-size: 16px;
-    }
+        /* App Layout */
+        .app-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
 
-    button {
-      padding: 10px 15px;
-      font-size: 16px;
-      margin-left: 10px;
-      cursor: pointer;
-    }
+        /* Sidebar Styles */
+        .sidebar {
+            width: 300px;
+            background-color: var(--sidebar-bg);
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid var(--border-color);
+            padding: 20px;
+        }
 
-    .result {
-      background: white;
-      padding: 15px;
-      margin: 10px auto;
-      width: 80%;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
 
-    .topic {
-      font-weight: bold;
-      color: #555;
-    }
-  </style>
+        .brand .logo {
+            background-color: var(--primary-accent);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .brand h1 {
+            font-size: 1.4rem;
+            color: var(--text-main);
+        }
+
+        .sidebar-instruction {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .category-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .category-btn {
+            width: 100%;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: transparent;
+            color: var(--text-main);
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .category-btn:hover {
+            background-color: rgba(224, 122, 95, 0.1);
+            color: var(--primary-accent);
+        }
+
+        .category-btn.active {
+            background-color: var(--primary-accent);
+            color: white;
+        }
+
+        /* Chat Container Styles */
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--chat-bg);
+        }
+
+        .chat-header {
+            padding: 20px 30px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: #ffffff;
+        }
+
+        .chat-header h2 {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+
+        .chat-header p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Chat Log / Messages */
+        .chat-messages {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .message {
+            display: flex;
+            flex-direction: column;
+            max-width: 70%;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 0; transform: translateY(0); }
+        }
+
+        .message.bot {
+            align-self: flex-start;
+        }
+
+        .message.user {
+            align-self: flex-end;
+        }
+
+        .message-bubble {
+            padding: 14px 18px;
+            border-radius: 18px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .bot .message-bubble {
+            background-color: var(--bubble-bot);
+            color: var(--text-main);
+            border-top-left-radius: 4px;
+        }
+
+        .user .message-bubble {
+            background-color: var(--primary-accent);
+            color: white;
+            border-top-right-radius: 4px;
+        }
+
+        .message-meta {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+            padding: 0 5px;
+        }
+        
+        .user .message-meta {
+            text-align: right;
+        }
+
+        /* Interactive Suggested Questions Panel */
+        .suggestion-panel {
+            padding: 20px 30px;
+            background-color: var(--bg-color);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .suggestion-title {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .suggestions-chips {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            max-height: 120px;
+            overflow-y: auto;
+        }
+
+        .chip {
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
+        }
+
+        .chip:hover {
+            border-color: var(--primary-accent);
+            color: var(--primary-accent);
+            background-color: rgba(224, 122, 95, 0.05);
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
+    </style>
 </head>
 <body>
 
-  <h1>Health FAQ Search</h1>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo">♥</div>
+                <h1>CycleCare</h1>
+            </div>
+            
+            <div class="sidebar-instruction">Topics</div>
+            <ul class="category-list">
+                <li><button class="category-btn active" onclick="switchCategory('pain')">Pain <span>→</span></button></li>
+                <li><button class="category-btn" onclick="switchCategory('moods')">Moods <span>→</span></button></li>
+                <li><button class="category-btn" onclick="switchCategory('flow')">Flow <span>→</span></button></li>
+                <li><button class="category-btn" onclick="switchCategory('changes')">Changes <span>→</span></button></li>
+            </ul>
+        </aside>
 
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Ask a question or type keywords..." />
-    <button id="searchBtn">Search</button>
-  </div>
+        <main class="chat-container">
+            <header class="chat-header">
+                <h2 id="current-category-title">Pain Support</h2>
+                <p>Select a question below to learn more about your body and cycle.</p>
+            </header>
 
-  <div id="results"></div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    <div class="message-bubble">
+                        Hello! Welcome to CycleCare. I'm here to help you understand your menstrual cycle. Please select a topic from the sidebar or click any question below to get accurate, stigma-free information.
+                    </div>
+                    <div class="message-meta">CycleCare Bot</div>
+                </div>
+            </div>
 
-  <script src="app.js"></script>
-
-  <script>
-    // Connect button to search function
-    document.getElementById("searchBtn").addEventListener("click", () => {
-      const input = document.getElementById("searchInput").value;
-      const matches = searchFAQ(input);
-      const resultsDiv = document.getElementById("results");
-      resultsDiv.innerHTML = "";
-
-      if (!matches) {
-        resultsDiv.innerHTML = `<div class="result">${faqData.fallback.message}</div>`;
-        return;
-      }
-
-      matches.slice(0, 5).forEach(result => {
-        const div = document.createElement("div");
-        div.className = "result";
-        div.innerHTML = `
-          <div class="topic">Topic: ${result.topic}</div>
-          <div><strong>Q:</strong> ${result.question}</div>
-          <div><strong>A:</strong> ${result.answer}</div>
-        `;
-        resultsDiv.appendChild(div);
-      });
-    });
-  </script>
+            <div class="suggestion-panel">
+                <div class="suggestion-title">Ask CycleCare about <span id="suggestion-topic-name">Pain</span>:</div>
+                <div class="suggestions-chips" id="suggestions-chips">
+                    </div>
+            </div>
+        </main>
+    </div>
 
 </body>
 </html>
