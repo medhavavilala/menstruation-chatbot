@@ -1,179 +1,280 @@
 {
-  "meta": {
-    "version": "1.0",
-    "lastUpdated": "2026-01-31",
-    "disclaimer": "This chatbot provides educational information, not medical advice."
-  },
-  "topics": [
+  "category": "mood",
+  "audience": "teens",
+  "global_disclaimer": "I am not a medical professional. This chatbot provides educational information only and does not replace professional medical advice. If emotional symptoms are severe, persistent, or interfering with daily life, speak with a trusted adult or healthcare provider.",
+  "qa": [
     {
-      "id": "pms_mood_basics",
-      "title": "PMS & Mood Swings Basics",
-      "keywords": ["PMS", "mood swings", "emotions", "before period", "premenstrual", "hormones"],
-      "qa": [
-        {
-          "id": "pms_mood_swings_normal",
-          "question": "Are mood swings normal during my period?",
-          "answer": "Yes, mood swings are one of the most common PMS symptoms and are considered normal for many people."
-        },
-        {
-          "id": "pms_emotional_why",
-          "question": "Why do I feel so emotional before my period?",
-          "answer": "PMS includes physical and emotional symptoms that start about a week before your period. Hormonal fluctuations in the second half of the cycle can make some people moodier than usual."
-        },
-        {
-          "id": "pms_common_emotions",
-          "question": "What are the common emotional experiences of PMS?",
-          "answer": "Common experiences include feeling depressed, angry, irritable, anxious, tearful, confused, socially withdrawn, and having difficulty concentrating."
-        },
-        {
-          "id": "pms_mood_pattern_changes",
-          "question": "Do mood swings always follow the same pattern each month?",
-          "answer": "Not necessarily. While some people notice patterns, mood timing and intensity can vary from cycle to cycle depending on stress, lifestyle, and other factors."
-        },
-        {
-          "id": "pms_duration",
-          "question": "How long do mood swings usually last?",
-          "answer": "PMS symptoms typically occur during the last 1 to 2 weeks before menstruation and often improve within a few days after bleeding starts."
-        }
-      ]
+      "id": 1,
+      "intent": "what_is_pms",
+      "triggers": ["what is pms", "define pms", "pms meaning"],
+      "question": "What is PMS?",
+      "answer": "PMS has a combination of both physical and emotional symptoms that typically occur after ovulation and before the start of the next menstrual period. It occurs because estrogen and progesterone levels intensely decrease when not pregnant."
     },
     {
-      "id": "hormones_and_brain",
-      "title": "Hormones, Brain Chemistry & Emotions",
-      "keywords": ["estrogen", "progesterone", "serotonin", "hormones", "brain", "cycle phases"],
-      "qa": [
-        {
-          "id": "hormones_mood_link",
-          "question": "How are mood swings linked to hormone changes in the menstrual cycle?",
-          "answer": "Changes in estrogen and progesterone affect serotonin, a neurotransmitter that regulates mood, sleep, and appetite. Shifts in these hormones can lead to emotional changes."
-        },
-        {
-          "id": "cycle_phase_mood",
-          "question": "Which phase of the cycle are mood swings most likely to happen in?",
-          "answer": "They most often occur during the luteal phase, the 1 to 2 weeks before menstruation."
-        },
-        {
-          "id": "period_mood_better",
-          "question": "Why does my mood feel better once my period starts?",
-          "answer": "Estrogen begins rising again during the menstrual and early follicular phase, which can support more stable mood and increased energy."
-        },
-        {
-          "id": "focus_hormones",
-          "question": "Can hormonal changes affect my ability to concentrate or focus?",
-          "answer": "Yes, hormone shifts before your period can influence serotonin and dopamine, which may temporarily reduce concentration and mental clarity."
-        }
-      ]
+      "id": 2,
+      "intent": "who_gets_pms",
+      "triggers": ["who gets pms", "how common is pms", "pms common"],
+      "question": "Who gets PMS?",
+      "answer": "3 in 4 women experience PMS symptoms at some point in their lifetime."
     },
     {
-      "id": "specific_emotions",
-      "title": "Specific Emotional Changes",
-      "keywords": ["irritability", "sadness", "anxiety", "crying", "sensitivity"],
-      "qa": [
-        {
-          "id": "irritability_before_period",
-          "question": "Why do I feel more irritable or angry before my period?",
-          "answer": "Drops in estrogen and progesterone can lower serotonin levels, which may increase irritability and anger."
-        },
-        {
-          "id": "sad_no_reason",
-          "question": "Why do I sometimes feel sad or tearful with no real reason before my period?",
-          "answer": "Hormone changes and serotonin shifts can trigger sadness or tearfulness even without a clear external cause."
-        },
-        {
-          "id": "anxious_before_period",
-          "question": "Why do I feel anxious or on edge in the week before my period?",
-          "answer": "Hormonal fluctuations paired with serotonin changes can increase anxiety and make you feel more on edge."
-        },
-        {
-          "id": "crying_overwhelmed",
-          "question": "Why do I get sudden bursts of crying or feel overwhelmed right before my period?",
-          "answer": "Emotional regulation may be more sensitive before your period, leading to stronger reactions with less trigger."
-        },
-        {
-          "id": "sensitive_to_criticism",
-          "question": "Why do I feel more sensitive to criticism or conflict before my period?",
-          "answer": "Pre-menstrual hormone changes can heighten emotional sensitivity, making social stressors feel more intense."
-        }
-      ]
+      "id": 3,
+      "intent": "pms_risk_factors",
+      "triggers": ["when pms happens more often", "risk factors for pms", "pms more likely"],
+      "question": "When can PMS happen more often?",
+      "answer": "PMS may occur more often in people with high levels of stress, a family history of depression, or a personal history of postpartum depression or depression."
     },
     {
-      "id": "lifestyle_factors",
-      "title": "Lifestyle & External Influences",
-      "keywords": ["exercise", "diet", "sleep", "caffeine", "stress", "hydration"],
-      "qa": [
-        {
-          "id": "exercise_help",
-          "question": "Does exercise help with mood swings?",
-          "answer": "Yes, regular aerobic exercise can improve mood, reduce fatigue, and help ease PMS symptoms."
-        },
-        {
-          "id": "diet_effect",
-          "question": "Does diet affect my mood swings?",
-          "answer": "Yes, balanced nutrition supports hormone and blood sugar stability. Limiting refined sugars, salt, caffeine, and alcohol may reduce symptoms."
-        },
-        {
-          "id": "sleep_effect",
-          "question": "Does sleep affect my mood swings?",
-          "answer": "Yes, poor sleep can worsen hormonal imbalance and intensify PMS symptoms like mood swings and irritability."
-        },
-        {
-          "id": "stress_worse",
-          "question": "Does external stress make menstrual mood swings worse?",
-          "answer": "Yes, stress can disrupt hormone production and make emotional symptoms more intense."
-        },
-        {
-          "id": "meditation_help",
-          "question": "Does meditation help with mood swings?",
-          "answer": "Yes, meditation has been shown to improve emotional and physical PMS symptoms, especially in people with more severe PMS."
-        }
-      ]
+      "id": 4,
+      "intent": "emotional_pms_symptoms",
+      "triggers": ["emotional symptoms of pms", "mental symptoms of pms", "pms mood symptoms"],
+      "question": "What are the symptoms of PMS? (Emotional/mental)",
+      "answer": "Symptoms may include irritability or hostile behavior, exhaustion, sleep problems (too much or too little sleep), appetite changes, food cravings, trouble concentrating or remembering things, tension or anxiety, depression or prolonged sadness, mood swings, and less interest in sex."
     },
     {
-      "id": "pmdd_and_when_to_seek_help",
-      "title": "PMDD & When Mood Swings Are Serious",
-      "keywords": ["PMDD", "severe PMS", "medical help", "depression", "anxiety"],
-      "qa": [
-        {
-          "id": "pmdd_difference",
-          "question": "What is PMDD and how is it different from normal mood swings?",
-          "answer": "PMDD is a severe form of PMS involving extreme irritability, anxiety, or depression that can interfere with daily life but improves after the period begins."
-        },
-        {
-          "id": "mood_swings_serious_signs",
-          "question": "When are mood swings more than just PMS?",
-          "answer": "If symptoms interfere with daily activities or quality of life, they may indicate PMDD or another condition and should be discussed with a doctor."
-        },
-        {
-          "id": "other_health_conditions",
-          "question": "Can mood swings be a sign of other health issues rather than menstrual-related?",
-          "answer": "Yes, if they last a long time, cause major distress, or interfere with daily functioning, they could be related to depression, anxiety, or other conditions."
-        }
-      ]
+      "id": 5,
+      "intent": "pms_other_conditions",
+      "triggers": ["pms affect other health problems", "pms and depression", "pms and anxiety"],
+      "question": "How does PMS affect other health problems? (Emotional/mental)",
+      "answer": "Depression and anxiety disorders are the most common conditions that overlap with PMS. Symptoms typically worsen before or during this period."
     },
     {
-      "id": "tracking_and_prevention",
-      "title": "Tracking, Prevention & Preparation",
-      "keywords": ["tracking", "prevention", "cycle diary", "prepare", "patterns"],
-      "qa": [
-        {
-          "id": "track_mood",
-          "question": "Can tracking my mood help me understand my cycle better?",
-          "answer": "Yes, tracking helps identify patterns, predict symptoms, and distinguish normal hormonal changes from more serious concerns."
-        },
-        {
-          "id": "cyclical_or_not",
-          "question": "How can I tell if my mood swings are cyclical or related to something else?",
-          "answer": "Track daily for 2 to 3 months. If symptoms repeat in the luteal phase and improve once your period starts, they’re likely cyclical. Random or constant symptoms may have another cause."
-        },
-        {
-          "id": "prevent_mood_swings",
-          "question": "Are there ways to prevent mood swings before they start?",
-          "answer": "Good sleep, regular exercise, stress reduction, stable meals, limiting caffeine and sugar, and tracking symptoms can help. Medical treatment may be needed for moderate to severe cases."
-        }
-      ]
+      "id": 6,
+      "intent": "cycle_emotions_energy",
+      "triggers": ["menstrual cycle emotions", "energy levels during cycle", "cycle mood changes"],
+      "question": "How does the menstrual cycle affect my emotions and energy level?",
+      "answer": "During the first half of the cycle (week 1–2 after the period starts), people may experience higher energy levels, better memory, and higher pain tolerance. During the second half of the cycle (when ovulation begins), people may feel sluggish or forgetful, and symptoms from health problems like depression or irritable bowel syndrome may worsen."
+    },
+    {
+      "id": 17,
+      "intent": "mood_swings_cause",
+      "triggers": ["what causes mood swings", "why mood swings period", "period mood swings"],
+      "question": "What causes mood swings in periods?",
+      "answer": "The most known speculation for mood swings are the fluctuation in levels of hormones or chemical messengers in the body, most typically estrogen and progesterone. The impact of these levels affect neurotransmitters in the brain, such as serotonin, which influences mood."
+    },
+    {
+      "id": 18,
+      "intent": "everyone_mood_swings",
+      "triggers": ["all girls mood swings", "everyone mood swings", "normal mood swings"],
+      "question": "Do all girls experience mood swings on their periods?",
+      "answer": "Not every girl experiences mood swings, but it is a common occurrence, a large global survey found that 64% of people who menstruate experience premenstrual mood swings or anxiety."
+    },
+    {
+      "id": 19,
+      "intent": "hormones_mood_swings",
+      "triggers": ["what hormones cause mood swings", "hormones mood swings"],
+      "question": "What hormones cause mood swings?",
+      "answer": "Estrogen and progesterone."
+    },
+    {
+      "id": 20,
+      "intent": "anxiety_worse_period",
+      "triggers": ["anxiety worse period", "stress worse period", "period anxiety"],
+      "question": "Can my period make my anxiety or stress worse?",
+      "answer": "Yes, symptoms for stress and anxiety typically worsen during a period because of a hormonal change during the menstrual cycle. Before a period begins, estradiol and progesterone decline rapidly and the draw back can underlie the symptoms."
+    },
+    {
+      "id": 22,
+      "intent": "anxious_during_cycle",
+      "triggers": ["anxious during cycle", "normal anxiety period"],
+      "question": "Is feeling anxious during my cycle normal?",
+      "answer": "It is different for everyone, most can feel more irritable, sad, or just experience general mood swings, but it does not directly mean you have anxiety."
+    },
+    {
+      "id": 23,
+      "intent": "anxiety_pms_pmdd",
+      "triggers": ["anxiety pms", "anxiety pmdd"],
+      "question": "Is anxiety a part of PMS and PMDD?",
+      "answer": "Some with anxiety problems can experience a jump in their symptoms in premenstrual. There is a possible link between PMS and anxiety. But for a diagnosis of PMDD, you must have one or more of these symptoms: Mood swings, Depressed mood, Anxiety, Irritability."
+    },
+    {
+      "id": 24,
+      "intent": "anxiety_help",
+      "triggers": ["help for anxiety", "when get help anxiety"],
+      "question": "How do I know I should get help for my anxiety during my menstrual cycle?",
+      "answer": "First, look at your symptoms and how those symptoms affect your lifestyle. If it interferes with your ability to work or go to school and impair the way you socialize, you should seek help from a doctor."
+    },
+    {
+      "id": 25,
+      "intent": "stop_anxiety",
+      "triggers": ["stop feeling anxious", "reduce anxiety period"],
+      "question": "What can I do to stop feeling anxious during my period?",
+      "answer": "Exercise, Restorative Yoga, Avoiding Caffeine, Magnesium, Vitamin B6, L-theanine (typically found in green tea)."
+    },
+    {
+      "id": 26,
+      "intent": "crying_normal",
+      "triggers": ["cry more period", "normal crying period"],
+      "question": "Is it normal to cry more during my period?",
+      "answer": "Many women experience heightened emotions during their periods, so you are not alone! Your hormones are typically the reason why you feel more sad most of the time."
+    },
+    {
+      "id": 27,
+      "intent": "crying_cause",
+      "triggers": ["why cry more period", "crying period cause"],
+      "question": "Why do I cry more during my period?",
+      "answer": "The reason is not definitively known, but experts believe the cause of the sadness and heightened emotions are due to the drop in estrogen and progesterone levels."
+    },
+    {
+      "id": 28,
+      "intent": "sadness_causes",
+      "triggers": ["causes sadness period", "why sad period"],
+      "question": "What are the causes for sadness during periods?",
+      "answer": "Low serotonin levels, Poor sleep quality, Changes in appetite, Not exercising, Stress."
+    },
+    {
+      "id": 29,
+      "intent": "stop_crying",
+      "triggers": ["stop crying period", "feel less sad period"],
+      "question": "How do I stop crying and feel sad during my period?",
+      "answer": "The feeling often goes away, but if it doesn’t, it is best to consult with a doctor."
+    },
+    {
+      "id": 30,
+      "intent": "deal_with_sadness",
+      "triggers": ["deal with sadness", "sad period help"],
+      "question": "How to deal with sadness during period",
+      "answer": "Eat food with high omega-3 fatty acids such as fish, Build exercise or activity into lifestyle, Avoid salty foods, Yoga, Cut out caffeine, Essential oils may help."
+    },
+    {
+      "id": 31,
+      "intent": "pms_age",
+      "triggers": ["pms age", "pms worsen age"],
+      "question": "Does PMS change with age?",
+      "answer": "Symptoms of PMS can worsen in ages 30-40. Usually, symptoms end when you reach menopause."
+    },
+    {
+      "id": 32,
+      "intent": "mood_swings_after_period",
+      "triggers": ["mood swings after period", "after period mood"],
+      "question": "Do mood swings end after your period ends?",
+      "answer": "Symptoms of periods may vary for people, but symptoms, such as mood swings, may linger for a few days even after a period ends, this is called Post-Menstrual Syndrome."
+    },
+    {
+      "id": 33,
+      "intent": "post_menstrual_syndrome",
+      "triggers": ["what is post menstrual syndrome", "post menstrual syndrome"],
+      "question": "What is Post-Menstrual Syndrome?",
+      "answer": "Post-Menstrual Syndrome is a term used to describe symptoms that are ongoing even after a period ends. It can be both physical and emotional."
+    },
+    {
+      "id": 34,
+      "intent": "continued_mood_swings",
+      "triggers": ["mood swings continue after period", "ongoing mood symptoms"],
+      "question": "What causes mood swings to keep going even after a period ends?",
+      "answer": "One of the possibilities of on-going emotional symptoms even after a period ends could be hormonal imbalance."
+    },
+    {
+      "id": 35,
+      "intent": "everyone_post_period_symptoms",
+      "triggers": ["everyone symptoms after period", "post menstrual symptoms common"],
+      "question": "Does everyone experience symptoms even after a period ends?",
+      "answer": "Not everyone experiences prolonged symptoms before and after a period. Post-menstrual symptoms tend to be less common than Pre-menstrual ones. Up to 90% experience Pre-menstrual symptoms while up to 20-40 experiences Post-menstrual symptoms."
+    },
+    {
+      "id": 36,
+      "intent": "pms_symptoms",
+      "triggers": ["symptoms of pms", "pms symptoms"],
+      "question": "What are the symptoms of PMS?",
+      "answer": "The symptoms range from physical to psychological ones, psychological being the most commonly reported which can be characterized through mood swings and anxiety. They may present themselves through irritability, anger, or sadness."
+    },
+    {
+      "id": 37,
+      "intent": "mood_swings_duration",
+      "triggers": ["how long mood swings last", "mood swings duration"],
+      "question": "How long do mood swings last in a period?",
+      "answer": "Symptoms usually begin 7-10 days before your period starts and continue for the first few days of your period. Though, there is a possibility you experience mood swings even after your period ends."
+    },
+    {
+      "id": 38,
+      "intent": "stress_affect_period",
+      "triggers": ["stress affect period", "period stress"],
+      "question": "Can stress affect my period?",
+      "answer": "Heightened stress can most likely worsen a period. Some effects stress may induce can be: Infrequent periods, Irregular periods, Heavier periods, Prolonged periods, On-going symptoms even after period ends."
+    },
+    {
+      "id": 39,
+      "intent": "why_stress_affects_period",
+      "triggers": ["why stress affects period"],
+      "question": "Why does stress affect my period?",
+      "answer": "Stress affects hormones in your body which may in turn affect other hormones. Due to periods and hormones being linked together, this can possibly affect your period, too. There is a possibility that stress leads to a decrease in production of reproductive hormones."
+    },
+    {
+      "id": 40,
+      "intent": "manage_stress",
+      "triggers": ["manage stress period", "reduce stress period"],
+      "question": "How can I manage stress during my period?",
+      "answer": "Exercise, Sleep, Social engagement, Mindfulness, Magnesium, Relaxation exercises."
+    },
+    {
+      "id": 41,
+      "intent": "tired_period",
+      "triggers": ["why tired period", "fatigue period"],
+      "question": "Why am I so tired during my period?",
+      "answer": "Decrease in estrogen and progesterone hormones, Uncomfortable period symptoms which may directly impact your sleep, Mood swings."
+    },
+    {
+      "id": 42,
+      "intent": "overthinking",
+      "triggers": ["overthink period", "overthinking period"],
+      "question": "Can my period cause me to overthink more?",
+      "answer": "Yes, it is possible that you overthink more during your periods. This can be because of hormonal changes and symptoms like mood swings which directly influence your mood."
+    },
+    {
+      "id": 43,
+      "intent": "period_shame",
+      "triggers": ["ashamed period", "embarrassed period"],
+      "question": "Why do I feel ashamed about my period?",
+      "answer": "It’s okay to feel ashamed about your period! But it is always best to consult with your parents and doctor regarding your period. Menstruation is a completely normal thing, and you shouldn’t be afraid to speak up and have a conversation about it!"
+    },
+    {
+      "id": 44,
+      "intent": "emotional_symptoms",
+      "triggers": ["emotional symptoms", "period emotions"],
+      "question": "What are emotional symptoms during periods?",
+      "answer": "Tension, Anxiousness, Crying, Trouble sleeping, Poor concentration, Social withdrawal."
+    },
+    {
+      "id": 45,
+      "intent": "anger_period",
+      "triggers": ["why angry period", "anger period"],
+      "question": "Why do I feel angry during my period?",
+      "answer": "Anger and irritability is one of the most common feelings during a period. A common cause for anger can be reduced serotonin levels."
+    },
+    {
+      "id": 46,
+      "intent": "anger_problem",
+      "triggers": ["anger problem period", "mad period"],
+      "question": "Can being angry on my period be a problem?",
+      "answer": "Feeling angry is a normal, human emotion. There is nothing wrong about being mad during your period, so as long as you are not hurting anyone, it is totally fine feeling angry!"
+    },
+    {
+      "id": 47,
+      "intent": "help_anger",
+      "triggers": ["help anger period", "reduce anger period"],
+      "question": "How can I help my anger during my period?",
+      "answer": "Track your emotions, Avoid triggers, Lifestyle changes, Manage your stress, Herbal Supplements, Diet changes."
+    },
+    {
+      "id": 48,
+      "intent": "apologize_anger",
+      "triggers": ["apologize anger", "anger apology"],
+      "question": "How do I apologize for my anger during my period?",
+      "answer": "Feeling angry is normal, but when it affects someone else, a conversation must be made. It is important to take responsibility for it through apologies. Communication is key for any relationship, so, by apologizing, you are taking accountability and acknowledging your wrongs."
+    },
+    {
+      "id": 49,
+      "intent": "less_tired",
+      "triggers": ["less tired period", "reduce fatigue period"],
+      "question": "What can I do to be less tired during my period?",
+      "answer": "As much as sleep helps, there are numerous ways to help decrease tiredness during periods. Physical activity helps boost energy levels which, in turn, may help boost your mood and decrease tiredness. It is also good to keep track of your hydration levels and drink plenty of water!"
+    },
+    {
+      "id": 50,
+      "intent": "causes_tiredness",
+      "triggers": ["what makes me tired", "causes tiredness period"],
+      "question": "What makes me tired during my period?",
+      "answer": "Low estrogen, Higher energy demands, Anemia."
     }
-  ],
-  "fallback": {
-    "message": "I do not have information on that yet. If your symptoms are severe or unusual, consider talking to a healthcare provider."
-  }
+  ]
 }
