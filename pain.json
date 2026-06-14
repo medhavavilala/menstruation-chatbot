@@ -689,7 +689,6 @@
   ]
   "fallback": {
     "intent": "fallback_unknown",
-    "triggers": [],
     "message": "I'm not sure I understood that question.",
     "follow_up": [
       "Can you explain your symptom in a different way?",
