@@ -705,6 +705,6 @@
     ],
     "safety_response": "If your pain is severe, unusual, suddenly much worse than normal, causes fainting, very heavy bleeding, fever, or stops you from daily activities, please talk to a trusted adult or healthcare provider.",
     "tone": "supportive",
-    "retry_limit_message": "I still may not understand your question. Try asking about cramps, headaches, back pain, nausea, or another period symptom."
+    "retry_limit_message": "I still may not understand your question. Try asking about cramps, headaches, back pain, nausea, or another period symptom related to pain."
   }
 }
