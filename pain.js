@@ -1,6 +1,6 @@
 let chatbotData = {};
 
-fetch("qa_data.json")
+fetch("pain.json")
   .then(response => response.json())
   .then(json => {
     chatbotData = json;
