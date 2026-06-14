@@ -45,6 +45,76 @@
       "question": "How does the menstrual cycle affect my emotions and energy level?",
       "answer": "During the first half of the cycle (week 1–2 after the period starts), people may experience higher energy levels, better memory, and higher pain tolerance. During the second half of the cycle (when ovulation begins), people may feel sluggish or forgetful, and symptoms from health problems like depression or irritable bowel syndrome may worsen."
     },
+     {
+      "id": 7,
+      "intent": "pmdd_test",
+      "triggers": ["test for pmdd", "do i have pmdd", "pmdd diagnosis", "how know pmdd"],
+      "question": "Is there a test for PMDD? How would a person know they have it?",
+      "answer": "Symptoms are usually what help identify PMDD. DSM-5 is a set of diagnostic criteria which helps identify PMDD and it requires at least one emotional symptom and five total symptoms to show cyclical change across the menstrual cycle."
+    },
+    {
+      "id": 8,
+      "intent": "pmdd_autoimmune",
+      "triggers": ["pmdd autoimmune", "pmdd immune system", "pmdd serotonin", "pmdd relationship autoimmune"],
+      "question": "Is there a relationship between other autoimmune situations and what happens in PMDD?",
+      "answer": "There’s studies regarding immune functions in PMDD versus controls. There aren't many massive differences in the periphery but it doesn’t mean there aren't neuroimmune mechanisms in play. A possible difference could be serotonin’s role and how differently it impacts people with PMDD in the luteal phase."
+    },
+    {
+      "id": 9,
+      "intent": "follicular_phase_mood",
+      "triggers": ["follicular phase mood", "start of cycle mood", "first phase mood", "estrogen positive mood"],
+      "question": "What phase impacts your mood at the start of your menstrual cycle?",
+      "answer": "The follicular phase is one of the first phases of your menstrual cycle. Estrogen levels rise which may lead to more positive behavior and mood."
+    },
+    {
+      "id": 10,
+      "intent": "luteal_phase_mood",
+      "triggers": ["luteal phase mood", "mood changes luteal phase", "after ovulation mood", "luteal phase emotions"],
+      "question": "How does the luteal phase impact changes in moods?",
+      "answer": "The luteal phase takes place after ovulation. During this phase, estrogen levels drop and progesterone levels rise. High levels of estrogen leads to more irritability and sad behavior."
+    },
+    {
+      "id": 11,
+      "intent": "treat_pmdd",
+      "triggers": ["treat pmdd", "pmdd treatment", "help pmdd", "manage pmdd"],
+      "question": "How do you treat PMDD?",
+      "answer": "There’s no known cause for it, but some treatments may typically be medication prescribed by a doctor, stress management, or changes in lifestyles."
+    },
+    {
+      "id": 12,
+      "intent": "manage_cycle_moods",
+      "triggers": ["lessen bad moods", "manage mood swings", "manage menstrual moods", "improve mood period"],
+      "question": "How do you manage a menstrual cycle to lessen bad moods?",
+      "answer": "Regular exercise, balanced diet, getting enough sleep, and connecting with friends and family."
+    },
+    {
+      "id": 13,
+      "intent": "lowest_mood_period",
+      "triggers": ["lowest mood period", "when mood lowest", "worst mood before period", "sad before period"],
+      "question": "When is my mood lowest in my period?",
+      "answer": "People experience periods differently, but typically most mood swings occur in the week that leads up to a period. Changes in mood can also be influenced by stress, work, and relationships."
+    },
+    {
+      "id": 14,
+      "intent": "manage_pms",
+      "triggers": ["manage pms", "help pms", "reduce pms symptoms", "pms treatment"],
+      "question": "How can I manage PMS?",
+      "answer": "Natural remedies, lifestyle changes, tracking symptoms, and reaching out to a doctor."
+    },
+    {
+      "id": 15,
+      "intent": "common_pms_emotions",
+      "triggers": ["emotional responses pms", "pms emotions", "common pms feelings", "pms mood symptoms"],
+      "question": "What are common emotional responses in PMS?",
+      "answer": "Depressed, anger, irritable, crying more, anxious, confusion, withdrawing from close ones, and difficulty concentrating."
+    },
+    {
+      "id": 16,
+      "intent": "ovulation_emotional",
+      "triggers": ["ovulation emotional", "emotional during ovulation", "ovulation mood swings", "does ovulation affect mood"],
+      "question": "Does ovulation make you emotional?",
+      "answer": "Although hormonal changes contribute to a variety of mood swings, a small proportion of people with PMS may experience a burst of symptoms around ovulation. Other research suggests people experience more positive mood changes."
+    },
     {
       "id": 17,
       "intent": "mood_swings_cause",
