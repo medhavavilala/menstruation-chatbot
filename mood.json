@@ -662,4 +662,49 @@
       "answer": "Avoid caffeine, excessive salt, sugar, processed foods, and refined carbohydrates. Focus on a balanced diet with whole grains, fruits, and vegetables. Prioritize regular exercise and sufficient sleep to help manage mood swings."
     }
   ]
+{
+  "fallback": {
+    "intent": "fallback_unknown",
+    
+    "message": "I'm not sure I understood that question. I can help answer questions about mood swings, PMS, PMDD, anxiety, sadness, irritability, emotional changes during the menstrual cycle, stress, concentration, and other period-related mood symptoms.",
+
+    "follow_up": [
+      "Can you explain how you're feeling in a different way?",
+      "Are you feeling sad, anxious, angry, overwhelmed, or something else?",
+      "Does this happen before, during, or after your period?",
+      "Have you noticed this happening every month or only sometimes?",
+      "Is this affecting your daily activities, school, relationships, or sleep?"
+    ],
+
+    "examples": [
+      "Why am I so emotional before my period?",
+      "Are mood swings normal during my period?",
+      "What is PMDD?",
+      "Can stress make my mood swings worse?",
+      "Why do I feel anxious before my period?",
+      "Can exercise help with mood swings?",
+      "How long do mood swings usually last?",
+      "Why do I feel angry before my period?"
+    ],
+
+    "tone": {
+      "style": "supportive",
+      "reading_level": "middle_school",
+      "voice": "friendly, calm, educational, and non-judgmental"
+    },
+
+    "retry_limit": {
+      "max_attempts": 3,
+      "messages": [
+        "I'm still having trouble understanding your question. Could you try describing your feelings differently?",
+        "I want to help, but I'm not sure what you're asking. Try mentioning your emotions and whether they happen before, during, or after your period.",
+        "I'm still unable to find a matching answer. You may want to ask a trusted adult, school nurse, parent, guardian, or healthcare provider for guidance."
+      ]
+    },
+
+    "safety_response": {
+      "message": "If your mood symptoms are severe, last for a long time, interfere with school, relationships, sleep, or daily activities, or cause significant distress, please talk to a trusted adult, parent, guardian, healthcare provider, or mental health professional.",
+      "emergency_message": "If you feel unsafe, think you may harm yourself, or are in immediate danger, seek help from a trusted adult or emergency services right away."
+    }
+  }
 }
